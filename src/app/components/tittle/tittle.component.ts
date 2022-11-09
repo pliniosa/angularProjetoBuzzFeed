@@ -7,6 +7,7 @@ import  quizz_questions  from '../../../assets/data/quizz_questions.json'
   styleUrls: ['./tittle.component.css']
 })
 export class TittleComponent implements OnInit {
+
   tittle: string = ""
 
   constructor() { }
