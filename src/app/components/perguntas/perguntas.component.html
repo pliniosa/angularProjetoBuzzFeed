@@ -1,0 +1,24 @@
+<div class="quizz__container">
+
+  <app-tittle></app-tittle>
+
+  <div class="quizz__questions" *ngIf=!finished>
+    <h2>{{questionSelected.question}}</h2>
+  </div>
+  <div class="quizz__options" *ngIf=!finished>
+    <button mat-raised-button color="primary" class="quizz__button"
+      *ngFor="let option of questionSelected.options; let i = index" (click)="contador(option.alias)">
+      {{option.name}}
+    </button>
+  </div>
+  <div class="quizz__results" *ngIf=finished>
+    <img *ngIf="opcFinal == 'A'"
+      src="https://i.pinimg.com/736x/aa/3f/8a/aa3f8a711bd9ca2111555278fbfb5a9f.jpg"
+      alt="">
+    <img *ngIf="opcFinal == 'B'"
+      src="https://images.vexels.com/media/users/3/236542/isolated/preview/94e0ee751991e18a3f71d80a7045afd1-silhueta-do-super-heroi-9.png"
+      alt="">
+    <br>
+    <p>{{answersSelected}}</p>
+  </div>
+</div>
